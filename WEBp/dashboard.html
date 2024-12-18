@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/dash-board.css' %}">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">work finder</a>
+        <nav class="navbar">
+            <a href="mainHome">Home</a>
+            <a href="profile">Profile</a>
+            <a href="about_us">About Us</a>
+            <a href="contact_us">Contact Us</a>
+        </nav>
+    </header>
+   
+    <br>
+    <br>
+    <br>
+    <table class="content-table">   
+        <thead>
+            <tr>
+                <th>Job ID</th>
+                <th>Company Name</th>
+                <th>Job Title</th>
+                <th>Salary</th>
+                <th>Years of Experience</th> 
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody id="jobTitlesContainer">
+            <!-- Job titles will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    <a href="{% url 'job_posting' %}">
+        <button class="pill">Add New Job</button>
+    </a>
+
+    <script src="{% static 'js/dashboard.js' %}"></script>
+</body>
+</html>
